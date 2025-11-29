@@ -1,64 +1,123 @@
-🌱 PlantDoc - Plant Disease Detection System
-A CNN-Based Deep Learning Model powered computer vision system that identifies plant diseases from leaf images using a custom Convolutional Neural Network (CNN). The solution is designed for real-time agricultural diagnostics and can be deployed as a web application for farmers and agritech platforms.
 
-🚀 Features
-Custom-built CNN architecture optimized for multi-class plant disease classification
-Comprehensive dataset preprocessing: normalization, augmentation, and stratified splitting
-Real-time Flask API for leaf image uploads and instant predictions
-Grad-CAM explainability to highlight infected regions in the image
-High-accuracy model trained on PlantVillage dataset
-Production-ready pipeline with model saving (SavedModel format)
-🏗️ System Architecture
-User Upload → Preprocessing → CNN Model
-                              ↓
-                        Class Prediction
-                              ↓
-                   Confidence Score + Heatmap (Grad-CAM)
-🧠 Model Overview
-Custom CNN with:
+---
 
-Convolution + MaxPooling layers
-Batch Normalization
-Dropout regularization
-Adam optimizer with LR scheduling
-Trained on 80/10/10 split
+# 🌱 PlantSpecialist – DL-Based Plant Disease Detection System
 
-Achieves strong generalization on unseen leaf images
+**PlantSpecialist** is an AI- **deep learning solution** that identifies plant diseases from leaf images using a **custom-built Convolutional Neural Network (CNN)**. Designed for **real-time agricultural diagnostics**, it can be deployed as a **web application** for farmers, agritech platforms, and smart crop monitoring systems.
 
-🛠️ Tech Stack
-Deep Learning: TensorFlow, Keras
-Backend: Flask
-Data Processing: NumPy, Pandas
-Visualization: Matplotlib, Grad-CAM
-Deployment: Python, Virtual Environment
-📦 Installation
-git clone https://github.com/<username>/plant-disease-detection.git
-cd plant-disease-detection
+---
 
+## 🚀 Key Features
+
+* 🔬 Custom CNN model optimized for **multi-class plant disease classification**
+* 🧪 Advanced preprocessing pipeline (**normalization, augmentation, stratified split**)
+* ⚙️ Real-time **Flask-based web API** for leaf image upload & predictions
+* 🔎 **Grad-CAM explainability** to highlight infected regions
+* 📈 High model accuracy trained on the **PlantVillage dataset**
+* 🛠️ Production-ready pipeline with **model saving (SavedModel format)**
+
+---
+
+## 🏗️ System Architecture
+
+```
+User Upload
+      ↓
+Image Preprocessing
+      ↓
+CNN Model Inference
+      ↓
+Prediction + Confidence Score
+      ↓
+Explainability (Grad-CAM Heatmap)
+```
+
+---
+
+## 🧠 Model Overview
+
+The model is based on a **custom CNN architecture** featuring:
+
+* Convolution + MaxPooling layers
+* Batch Normalization
+* Dropout regularization
+* Adam optimizer with learning rate scheduling
+* Train–validation–test split: **80% / 10% / 10%**
+
+✔ Achieves **high generalization** on unseen plant leaf images.
+
+---
+
+## 🛠 Tech Stack
+
+| Component       | Technology                      |
+| --------------- | ------------------------------- |
+| Deep Learning   | TensorFlow, Keras               |
+| Backend API     | Flask                           |
+| Data Processing | NumPy, Pandas                   |
+| Visualization   | Matplotlib, Grad-CAM (heatmaps) |
+| Deployment      | Python (virtual environment)    |
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/<username>/PlantSpecialist.git
+cd PlantSpecialist
 pip install -r requirements.txt
-▶️ Usage
-1️⃣ Run the Flask App
+```
+
+---
+
+## ▶️ Usage
+
+### 1️⃣ Run the Flask App
+
+```bash
 python app.py
-2️⃣ Upload a leaf image via the UI
-The model will return:
+```
 
-Predicted disease name
-Confidence score
-Grad-CAM heatmap for explainability
-📊 Dataset
-PlantVillage Dataset
+### 2️⃣ Upload a leaf image via the UI
 
-54,000+ leaf images
-38 plant disease categories
-Healthy + diseased classes
-(You may add dataset link if you upload on your repo.)
+The model returns:
+✔ Predicted disease name
+✔ Confidence score
+✔ Grad-CAM heatmap for explainability
 
-📈 Results
-High test accuracy
-Robust inference under variations (lighting, orientation)
-Grad-CAM maps validate disease-focused interpretation
-🔮 Future Improvements
-Deploy model via Docker + FastAPI
-Convert model to TensorFlow Lite for mobile/edge devices
-Add YOLO-based disease localization
-Add real-time field monitoring using drone imagery
+---
+
+## 📊 Dataset
+
+**PlantVillage Dataset**
+
+* 54,000+ plant leaf images
+* 38 disease categories
+* Includes both **healthy and infected** samples
+
+*(You can provide a dataset link if uploaded in the repository.)*
+
+---
+
+## 📈 Results
+
+* 🔥 High test accuracy
+* 📌 Robust predictions under variations (lighting, orientation)
+* 🔍 Grad-CAM maps validate disease-focused modeling
+
+---
+
+## 🔮 Future Enhancements
+
+* 🚢 Deploy with **Docker + FastAPI**
+* 📱 Convert to **TensorFlow Lite** for edge/mobile deployment
+* 🔦 Add **YOLO-based disease localization**
+* 🚁 Integration with **drone imagery** for real-time field monitoring
+
+---
+
+## 🧑‍🌾 Impact
+
+✨ PlantSpecialist supports **early disease detection**, helping reduce crop damage and improving agricultural productivity through **AI-driven farming solutions**.
+
+---
